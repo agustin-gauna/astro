@@ -1,0 +1,25 @@
+---
+import { imageConfig } from "astro:assets";
+
+const platform = "github";
+const username = "withastro";
+
+import Social from '../components/Social.astro'
+---
+
+<style>
+    footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+
+<footer>
+  <p>¡Más información sobre mis proyectos en <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+
+  <Social platform="Twitter" username="astrodotbuild"/>
+  <Social platform="Github" username="withastro"/>
+  <Social platform="Youtube" username="astrodotbuilT"/>
+
+</footer>

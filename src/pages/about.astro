@@ -10,6 +10,10 @@ import '../styles/global.css';
   hobbies: ["deportes", "videojuegos", "leer"],
 };
 
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro';
+
+
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
 
 const happy = true;
@@ -44,9 +48,7 @@ const textCase = "uppercase"
 	</head>
 	<body>
 
-        <a href="/">Inicio</a>
-        <a href="/about/">Sobre mi</a>
-        <a href="/blog/">Blog</a>
+        <Header/>
 
 		<h1>{pageTitle}</h1>
 
@@ -77,5 +79,10 @@ const textCase = "uppercase"
 
         {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
 
+        <Footer/>
+
+        <script>
+			import "../scripts/menu.js"
+		</script>
 	</body>
 </html>
